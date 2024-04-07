@@ -8,7 +8,7 @@ Se proporciona un ejemplo de gramática en forma de diccionario, junto con su ll
 
 ## Cambio de Gramática:
 
-Para cambiar la gramática que se está analizando, es necesario reemplazar los elementos del diccionario `gramatica` con la nueva gramática deseada. El diccionario `gramatica` sigue la convención de tener símbolos no terminales como claves y producciones como listas de listas de símbolos (terminales y no terminales) como valores asociados a esas claves.
+Para cambiar la gramática que se está analizando, es necesario reemplazar los elementos del diccionario `gramatica` con la nueva gramática deseada, hay opciones comentadas en codigo en caso de querer remplasarla con algun otro ejemplo o pueden ser modificadas. El diccionario `gramatica` sigue la convención de tener símbolos no terminales como claves y producciones como listas de listas de símbolos (terminales y no terminales) como valores asociados a esas claves.
 
 ## Puntos Claves del Algoritmo:
 
