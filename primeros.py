@@ -4,7 +4,8 @@ def calcular_primeros(gramatica):
     
     # Función auxiliar para determinar si un símbolo es terminal
     def es_terminal(simbolo):
-        return simbolo not in gramatica
+        return simbolo not in gramatica.keys()
+
     
     # Función recursiva para calcular los primeros de un símbolo
     # PRIMEROS(αlpha) = primeros
@@ -29,6 +30,9 @@ def calcular_primeros(gramatica):
             # Regla 2b, 2c, 2d: Si es un no terminal, calcular primeros recursivamente
             else:
                 for i, symbol in enumerate(produccion):
+                    if es_terminal(symbol):
+                        primeros[simbolo].add(symbol)
+                        break
                     #regla 2d: se llama recursivamente 
                     primeros_del_simbolo = calcular_primeros_rec(symbol)
                     #regla 2b: restando epsilon
@@ -49,13 +53,21 @@ def calcular_primeros(gramatica):
 
 # Ejemplo de diapositivas del profe
 gramatica = {
-    'A': [['B', 'C'], ['bad']],
-    'B': [['big', 'C', 'boss'], ['ε']],
-    'C': [['cat'], ['cow']],
+    'S': [['A', 'uno', 'B', 'C'], ['S','dos']],
+    'A': [['B', 'C', 'D'], ['A', 'tres'], ['ε']],
+    'B': [['D', 'cuatro', 'C', 'tres'], ['ε']],
+    'C': [['cinco','D', 'B'], ['ε']],
+    'D': [['seis'], ['ε']]
 }
+
+# Ejercicio de diapositivas del profe
+"""gramatica = {
+    'A': [['B', 'C'], ['ant', 'A', 'all']],
+    'B': [['big', 'C'], ['bus', 'A', 'boss'], ['ε']],
+    'C': [['cat'], ['cow']],
+}"""
 
 #llamar a la funcion principal
 primeros = calcular_primeros(gramatica)
 for simbolo, primeros_simbolo in primeros.items():
     print(f'PRIMEROS({simbolo}): {primeros_simbolo}')
-
