@@ -2,6 +2,14 @@
 
 Este algoritmo implementa una función para calcular los primeros de cada símbolo en una gramática dada. Los primeros de un símbolo en una gramática son los terminales que pueden aparecer como el primer símbolo de alguna cadena generada por ese símbolo.
 
+## Ejemplo de Uso:
+
+Se proporciona un ejemplo de gramática en forma de diccionario, junto con su llamada a la función principal `calcular_primeros(gramatica)`. Los primeros de cada símbolo en la gramática proporcionada se imprimen al final del script.
+
+## Cambio de Gramática:
+
+Para cambiar la gramática que se está analizando, es necesario reemplazar los elementos del diccionario `gramatica` con la nueva gramática deseada. El diccionario `gramatica` sigue la convención de tener símbolos no terminales como claves y producciones como listas de listas de símbolos (terminales y no terminales) como valores asociados a esas claves.
+
 ## Puntos Claves del Algoritmo:
 
 1. **Definición de la Función Principal**: La función principal es `calcular_primeros(gramatica)`, que toma como entrada la gramática en forma de diccionario.
@@ -19,10 +27,4 @@ Este algoritmo implementa una función para calcular los primeros de cada símbo
 
 5. **Iteración sobre la Gramática**: Se itera sobre cada símbolo en la gramática y se calculan sus primeros llamando a `calcular_primeros_rec(simbolo)`.
 
-## Cambio de Gramática:
 
-Para cambiar la gramática que se está analizando, es necesario reemplazar los elementos del diccionario `gramatica` con la nueva gramática deseada. El diccionario `gramatica` sigue la convención de tener símbolos no terminales como claves y producciones como listas de listas de símbolos (terminales y no terminales) como valores asociados a esas claves.
-
-## Ejemplo de Uso:
-
-Se proporciona un ejemplo de gramática en forma de diccionario, junto con su llamada a la función principal `calcular_primeros(gramatica)`. Los primeros de cada símbolo en la gramática proporcionada se imprimen al final del script.
