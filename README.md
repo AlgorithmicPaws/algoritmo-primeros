@@ -4,7 +4,7 @@ Este algoritmo implementa una función para calcular los primeros de cada símbo
 
 ## Ejemplo de Uso:
 
-Se proporciona un ejemplo de gramática en forma de diccionario, junto con su llamada a la función principal `calcular_primeros(gramatica)`. Los primeros de cada símbolo en la gramática proporcionada se imprimen al final del script.
+Se proporciona un ejemplo de gramática en forma de diccionario, junto con su llamada a la función principal `calcular_primeros(gramatica)`. Los primeros de cada símbolo en la gramática proporcionada se imprimen al final del script. Para ejecutar el programa se debe usar el comando `python3 primeros.py`.
 
 ## Cambio de Gramática:
 
